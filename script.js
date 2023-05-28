@@ -35,9 +35,8 @@ slider.addEventListener("scroll", (e) => {
 
 // Scroll to the last image on page load
 window.addEventListener("load", (e) => {
-  const images = slider.querySelectorAll("img");
-  const lastImage = images[images.length - 1];
-  const scrollPos =
-    lastImage.offsetLeft - slider.offsetWidth / 2 + lastImage.offsetWidth / 2;
-  slider.scrollLeft = scrollPos;
+  const carouselItems = slider.querySelectorAll(".carousel-item");
+  const itemWidth = carouselItems[0].offsetWidth; // assuming all items are the same width
+  const totalWidth = itemWidth * carouselItems.length;
+  slider.scrollLeft = totalWidth + slider.offsetWidth;
 });
