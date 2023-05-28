@@ -32,15 +32,12 @@ body {
   align-items: center;
   background-color: white;
   overflow: hidden;
-  padding-top: 28%;
-  margin-top: -20%;
 }
 
 .carousel-item img {
   position: absolute;
-  top: 0;
-  height: 150%;
-  margin-left: -40%;
+  height: 115%;
+  left: -100%;
 }
 
 #carousel .carousel-item:first-child {
