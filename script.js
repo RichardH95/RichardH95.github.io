@@ -61,6 +61,27 @@ window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", setCarouselItemWidth);
 });
 
-let myDiv = document.getElementById("custom");
-console.log(myDiv.offsetWidth);
-console.log(myDiv.offsetHeight);
+slider.addEventListener("scroll", () => {
+  const carouselWidth = slider.offsetWidth;
+  const carouselCenter = slider.scrollLeft + carouselWidth / 2;
+
+  const extraWidth = 0; // adjust this to change the additional space considered
+
+  const carouselItems = slider.querySelectorAll(".carousel-item");
+  carouselItems.forEach((item) => {
+    const itemWidth = item.offsetWidth;
+    const itemLeft = item.offsetLeft - slider.scrollLeft;
+    const itemRight = itemLeft + itemWidth;
+    const itemCenter = itemLeft + itemWidth / 2;
+
+    if (
+      itemCenter > carouselCenter - itemWidth / 2 - extraWidth &&
+      itemCenter < carouselCenter + itemWidth / 2 + extraWidth
+    ) {
+      const img = item.querySelector("img");
+      const src = img.src;
+      const fileName = src.substring(src.lastIndexOf("/") + 1);
+      console.log(fileName);
+    }
+  });
+});
