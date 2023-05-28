@@ -35,6 +35,7 @@ body {
 }
 
 .carousel-item img {
+  user-select: none;
   position: absolute;
   height: 115%;
   left: -100%;
