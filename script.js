@@ -40,3 +40,27 @@ window.addEventListener("load", (e) => {
   const totalWidth = itemWidth * carouselItems.length;
   slider.scrollLeft = totalWidth + slider.offsetWidth;
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("carousel");
+  const carouselItems = document.querySelectorAll(".carousel-item");
+
+  function setCarouselItemWidth() {
+    const carouselHeight = carousel.offsetHeight;
+    const itemWidth = `${carouselHeight / 3}px`;
+
+    carouselItems.forEach((item) => {
+      item.style.width = itemWidth;
+    });
+  }
+
+  // Initial width calculation
+  setCarouselItemWidth();
+
+  // Recalculate width on window resize
+  window.addEventListener("resize", setCarouselItemWidth);
+});
+
+let myDiv = document.getElementById("custom");
+console.log(myDiv.offsetWidth);
+console.log(myDiv.offsetHeight);
