@@ -40,6 +40,7 @@ body {
   left: -120%;
 }
 
+/*
 #carousel .carousel-item:first-child {
   margin-left: 45%;
 }
@@ -47,6 +48,7 @@ body {
 #carousel .carousel-item:last-child {
   margin-right: 45%;
 }
+*/
 
 #carousel::-webkit-scrollbar {
   display: none; /* Hide scrollbar on Chrome, Safari and newer versions of Opera */
