@@ -10,16 +10,15 @@ body {
 #carouselContainer {
   position: relative;
   width: 100%;
-  height: 66%;
+  height: 70%;
   overflow-x: hidden;
-  display: flex;
 }
 
 #carousel {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  height: 66%;
+  height: 90%;
   width: 100%;
 }
 
@@ -37,16 +36,16 @@ body {
 .carousel-item img {
   user-select: none;
   position: absolute;
-  height: 120%;
-  left: -110%;
+  height: 125%;
+  left: -120%;
 }
 
 #carousel .carousel-item:first-child {
-  margin-left: 45%;
+  margin-left: 47.5%;
 }
 
 #carousel .carousel-item:last-child {
-  margin-right: 45%;
+  margin-right: 47.5%;
 }
 
 #carousel::-webkit-scrollbar {
@@ -56,4 +55,22 @@ body {
 #carousel {
   -ms-overflow-style: none; /* Hide scrollbar on IE and Edge */
   scrollbar-width: none; /* Hide scrollbar on Firefox */
+}
+
+.centered-div {
+  width: 5px;
+  height: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999; /* Add a higher z-index value */
+}
+
+.carousel-text {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  color: #ffffff42;
+  font-family: futura;
 }

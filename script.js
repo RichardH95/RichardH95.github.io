@@ -61,27 +61,56 @@ window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", setCarouselItemWidth);
 });
 
-slider.addEventListener("scroll", () => {
-  const carouselWidth = slider.offsetWidth;
-  const carouselCenter = slider.scrollLeft + carouselWidth / 2;
+window.onload = function () {
+  var imgElements = document.getElementsByTagName("img");
+  var imgCoordinates = [];
+  var centerDiv = document.querySelector(".centered-div");
+  var imageGroupDiv = document.querySelector(".carousel-text");
 
-  const extraWidth = 0; // adjust this to change the additional space considered
+  // Function to calculate coordinates
+  var calculateCoordinates = function () {
+    imgCoordinates = []; // Reset coordinates array
 
-  const carouselItems = slider.querySelectorAll(".carousel-item");
-  carouselItems.forEach((item) => {
-    const itemWidth = item.offsetWidth;
-    const itemLeft = item.offsetLeft - slider.scrollLeft;
-    const itemRight = itemLeft + itemWidth;
-    const itemCenter = itemLeft + itemWidth / 2;
+    // Get center-div coordinates
+    var centerRect = centerDiv.getBoundingClientRect();
+    var centerCoordinates = {
+      x: centerRect.left + window.scrollX,
+      y: centerRect.top + window.scrollY,
+      width: centerRect.width,
+      height: centerRect.height,
+      right: centerRect.right + window.scrollX,
+      bottom: centerRect.bottom + window.scrollY,
+    };
 
-    if (
-      itemCenter > carouselCenter - itemWidth / 2 - extraWidth &&
-      itemCenter < carouselCenter + itemWidth / 2 + extraWidth
-    ) {
-      const img = item.querySelector("img");
-      const src = img.src;
-      const fileName = src.substring(src.lastIndexOf("/") + 1);
-      console.log(fileName);
+    for (let i = 0; i < imgElements.length; i++) {
+      let rect = imgElements[i].getBoundingClientRect();
+      let imgCoord = {
+        imgIndex: i,
+        x: rect.left + window.scrollX,
+        y: rect.top + window.scrollY,
+        width: rect.width,
+        height: rect.height,
+        right: rect.right + window.scrollX,
+        bottom: rect.bottom + window.scrollY,
+      };
+      imgCoordinates.push(imgCoord);
+
+      // Check if center-div is inside this image
+      if (
+        centerCoordinates.x >= imgCoord.x + imgElements[0].width / 5 &&
+        centerCoordinates.y >= imgCoord.y &&
+        centerCoordinates.right <= imgCoord.right &&
+        centerCoordinates.bottom <= imgCoord.bottom
+      ) {
+        // Update text inside image-group div
+        imageGroupDiv.innerText = imgElements[i].alt;
+      }
     }
-  });
-});
+  };
+
+  // Calculate coordinates when the page is loaded
+  calculateCoordinates();
+
+  // Calculate coordinates when the user scrolls
+  slider.addEventListener("scroll", calculateCoordinates);
+};
