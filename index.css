@@ -41,11 +41,11 @@ body {
 }
 
 #carousel .carousel-item:first-child {
-  margin-left: 47.5%;
+  margin-left: 45%;
 }
 
 #carousel .carousel-item:last-child {
-  margin-right: 47.5%;
+  margin-right: 45%;
 }
 
 #carousel::-webkit-scrollbar {
