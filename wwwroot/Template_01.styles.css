@@ -1,0 +1,562 @@
+/* _content/Template_01/Components/Layout/MainLayout.razor.rz.scp.css */
+.page[b-xnrduzt8qg] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-xnrduzt8qg] {
+    flex: 1;
+}
+
+.top-row[b-xnrduzt8qg] {
+    background-color: transparent;
+    border-bottom: none;
+    justify-content: flex-start;
+    max-height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-xnrduzt8qg]  a, .top-row[b-xnrduzt8qg]  .btn-link {
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    .top-row[b-xnrduzt8qg]  a:hover, .top-row[b-xnrduzt8qg]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-xnrduzt8qg]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-xnrduzt8qg] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-xnrduzt8qg]  a, .top-row[b-xnrduzt8qg]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-xnrduzt8qg] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-xnrduzt8qg] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-xnrduzt8qg] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-xnrduzt8qg]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+}
+
+#blazor-error-ui[b-xnrduzt8qg] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-xnrduzt8qg] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/Template_01/Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar .flex-child[b-opvepoc9o2] {
+    color: white;
+    text-decoration: none;
+}
+    .navbar .flex-child:hover[b-opvepoc9o2] {
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar[b-opvepoc9o2]{
+        position:fixed;
+        top:0;
+    }
+
+.navbar-toggler[b-opvepoc9o2] {
+    appearance: none;
+    cursor: pointer;
+    width: 3.5rem;
+    height: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler:checked[b-opvepoc9o2] {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top-row[b-opvepoc9o2] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-opvepoc9o2] {
+    font-size: 1.1rem;
+}
+
+.bi[b-opvepoc9o2] {
+    display: inline-block;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.75rem;
+    top: -1px;
+    background-size: cover;
+}
+
+.bi-house-door-fill-nav-menu[b-opvepoc9o2] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-house-door-fill' viewBox='0 0 16 16'%3E%3Cpath d='M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z'/%3E%3C/svg%3E");
+}
+
+.bi-plus-square-fill-nav-menu[b-opvepoc9o2] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-plus-square-fill' viewBox='0 0 16 16'%3E%3Cpath d='M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z'/%3E%3C/svg%3E");
+}
+
+.bi-list-nested-nav-menu[b-opvepoc9o2] {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='white' class='bi bi-list-nested' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E");
+}
+
+.nav-item[b-opvepoc9o2] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-opvepoc9o2] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-opvepoc9o2] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-opvepoc9o2]  .nav-link {
+        color: #d7d7d7;
+        background: none;
+        border: none;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        width: 100%;
+    }
+
+#navbarNav > * > a[b-opvepoc9o2] {
+    color:black;
+}
+
+.nav-item[b-opvepoc9o2]  a.active {
+    background-color: rgba(255,255,255,0.37);
+    color: white;
+}
+
+.nav-item[b-opvepoc9o2]  .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.nav-scrollable[b-opvepoc9o2] {
+    display: none;
+}
+
+.navbar-toggler:checked ~ .nav-scrollable[b-opvepoc9o2] {
+    display: block;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-opvepoc9o2] {
+        display: none;
+    }
+
+    .nav-scrollable[b-opvepoc9o2] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}
+/* _content/Template_01/Components/Modules/About.razor.rz.scp.css */
+/*About*/
+.about-section[b-r038xtwu3t] {
+    padding: 6rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+    .about-section h2[b-r038xtwu3t] {
+        font-size: 2.5rem; /* Large, readable title size */
+        color: #D9534F; /* A color that stands out, similar to the "Italian Restaurant" in the image */
+        margin-bottom: 1rem;
+    }
+
+.text-section p[b-r038xtwu3t] {
+    font-family: 'Open Sans', sans-serif; /* Use a modern, clean font */
+    font-size: 1rem; /* Standard text size */
+    color: #555; /* Dark grey color for text for readability */
+    margin-bottom: 1rem;
+}
+
+.txt4[b-r038xtwu3t] {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    color: #222222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.fa[b-r038xtwu3t] {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-long-arrow-right[b-r038xtwu3t]::before {
+    content: "\f178";
+}
+
+.m-l-10[b-r038xtwu3t] {
+    margin-left: 10px; /* example margin-left */
+}
+
+.image-section img[b-r038xtwu3t] {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: none; /* Assuming no border is needed */
+}
+
+/* Add responsive behavior */
+@media (max-width: 768px) {
+    .about-section .row[b-r038xtwu3t] {
+        flex-direction: column-reverse;
+    }
+
+    .text-section[b-r038xtwu3t],
+    .image-section[b-r038xtwu3t] {
+        text-align: center;
+    }
+
+    .text-section[b-r038xtwu3t] {
+        order: 1; /* Ensure text appears above the image on small screens */
+    }
+}
+/* _content/Template_01/Components/Modules/BgImage.razor.rz.scp.css */
+.full-width-background[b-wiy19olkj9] {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .full-width-background[b-wiy19olkj9]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('Images/LandingImg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(0.5px); /* Apply blur here */
+        z-index: -1; /* This will place the image behind the text content */
+    }
+
+    .full-width-background[b-wiy19olkj9]::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+        z-index: 0; /* Above the image, below the text content */
+    }
+
+.welcome-text[b-wiy19olkj9] {
+    z-index: 1; /* Above the ::before and ::after pseudo-elements */
+    color: white; /* Ensure text color contrasts with the background */
+}
+
+.txt1[b-wiy19olkj9] {
+    font-family: Courgette;
+    font-size: 60px;
+    line-height: 1.1;
+    color: white;
+}
+
+.txt2[b-wiy19olkj9] {
+    font-family: Courgette;
+    font-size: 30px;
+    line-height: 1.1;
+    color: white;
+}
+
+.title[b-wiy19olkj9] {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 1.1;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    word-spacing: 10px;
+}
+
+.title2[b-wiy19olkj9] {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #222222;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    word-spacing: 8px;
+}
+/* _content/Template_01/Components/Modules/Menu.razor.rz.scp.css */
+/*Menu*/
+.title1[b-rwxzzbkatt] {
+    font-family: 'Courgette';
+    font-size: 30px;
+    line-height: 1.2;
+    color: #D9534F;
+}
+
+.title2[b-rwxzzbkatt] {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    word-spacing: 8px;
+}
+
+.section-ourmenu[b-rwxzzbkatt] {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: block;
+    padding-top: 115px;
+    padding-bottom: 120px;
+    background-image: url(../images/icons/pattern2.png);
+    background-repeat: repeat;
+}
+
+.title-section-ourmenu[b-rwxzzbkatt] {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #212529;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.item-ourmenu[b-rwxzzbkatt] {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 30px;
+}
+
+    .item-ourmenu:hover[b-rwxzzbkatt] {
+        -webkit-transition: all 0.6s;
+        -o-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        transition: all 0.6s;
+    }
+
+        .item-ourmenu:hover img[b-rwxzzbkatt] {
+            transform: scale(1.1);
+        }
+
+        .item-ourmenu:hover img[b-rwxzzbkatt],
+        .item-ourmenu:hover a:hover + img[b-rwxzzbkatt] {
+            transform: scale(1.1);
+        }
+
+
+img[b-rwxzzbkatt] {
+    width: 100%;
+    -webkit-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+    transition: transform 0.6s ease;
+}
+
+.btn[b-rwxzzbkatt] {
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+    .btn:hover[b-rwxzzbkatt] {
+        background-color: #D9534F;
+        color: white;
+    }
+
+.btn-txt[b-rwxzzbkatt] {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 22px;
+    color: #333333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.btn-size1[b-rwxzzbkatt] {
+    width: 150px;
+    height: 60px;
+}
+
+.btn-size2[b-rwxzzbkatt] {
+    width: 110px;
+    height: 60px;
+}
+
+.btn-size3[b-rwxzzbkatt] {
+    width: 255px;
+    height: 60px;
+}
+
+.btn-size4[b-rwxzzbkatt] {
+    width: 190px;
+    height: 60px;
+}
+
+.btn-size5[b-rwxzzbkatt] {
+    width: 140px;
+    height: 60px;
+}
+
+.btn-size6[b-rwxzzbkatt] {
+    width: 130px;
+    height: 60px;
+}
+
+a[b-rwxzzbkatt] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+}
+
+    a:hover + img[b-rwxzzbkatt] {
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+/* _content/Template_01/Components/Modules/Parallax.razor.rz.scp.css */
+/*Parallax*/
+.parallax[b-bi5flas26z] {
+    /* The image used */
+    background-image: url('Images/AboutUsImg.jpg');
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Positioning context for the text overlay */
+    position: relative;
+    /* Dim effect */
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+    .parallax[b-bi5flas26z]::before {
+        /* Dim effect using a pseudo-element */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+        z-index: 1;
+    }
+
+.parallax-text[b-bi5flas26z] {
+    /* Centering the text inside the parallax window */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+    .parallax-text h1[b-bi5flas26z], .parallax-text h2[b-bi5flas26z] {
+        color: white;
+    }
+
+    .parallax-text h2[b-bi5flas26z] {
+        font-family: 'Courgette';
+        font-size: 2rem; /* Example size, adjust as needed */
+        color: #D9534F;
+    }
+
+    .parallax-text h1[b-bi5flas26z] {
+        font-family: 'Poppins';
+        font-size: 3rem; /* Example size, adjust as needed */
+    }
